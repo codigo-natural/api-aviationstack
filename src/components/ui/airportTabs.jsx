@@ -1,4 +1,3 @@
-// src/components/ui/airportTabs.jsx
 import React from 'react'
 
 export const AirportTabs = ({ activeTab, setActiveTab }) => {

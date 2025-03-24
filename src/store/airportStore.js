@@ -26,6 +26,8 @@ const ITEMS_PER_PAGE = 10
  * @property {number} longitude
  */
 
+const baseUrl = 'https://api.aviationstack.com/v1/airports'
+
 export const useAirportStore = create((set, get) => ({
   airports: [],
   isLoading: false,
@@ -63,12 +65,12 @@ export const useAirportStore = create((set, get) => ({
 
     set({ isLoading: true, error: null, searchQuery: searchTerm })
 
-    const url = `https://api.aviationstack.com/v1/airports?access_key=${API_KEY}`
+    const url = `${baseUrl}?access_key=${API_KEY}`
     /**
      * La url de debajo se puede usar si se paga la suscripcion al plan basic
-     * de lo contrario se puede usar la url de arriba 
+     * de lo contrario se puede usar la url de arriba
      */
-    // const url = `https://api.aviationstack.com/v1/airports?access_key=${API_KEY}&offset=${
+    // const url = `${baseUrl}?access_key=${API_KEY}&offset=${
     //   (currentPage - 1) * ITEMS_PER_PAGE
     // }&limit=${ITEMS_PER_PAGE}${
     //   searchTerm ? `&search=${encodeURIComponent(searchTerm)}` : ''
@@ -103,7 +105,7 @@ export const useAirportStore = create((set, get) => ({
 
     try {
       const response = await fetch(
-        `http://api.aviationstack.com/v1/airports?access_key=${API_KEY}&airport_id=${id}`
+        `${baseUrl}?access_key=${API_KEY}&airport_id=${id}`
       )
 
       if (!response.ok) {

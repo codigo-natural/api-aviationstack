@@ -1,4 +1,3 @@
-// src/components/ui/input.jsx
 export const Input = ({ className, ref, type, ...props }) => {
   return (
     <input

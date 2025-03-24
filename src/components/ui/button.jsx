@@ -1,8 +1,7 @@
-// src/components/ui/button.jsx
 import React from "react";
 import { cn } from "@/lib/utils";
 
-export const Button = React.forwardRef(
+export const Button = (
   ({ className, ...props }, ref) => {
     return (
       <button
