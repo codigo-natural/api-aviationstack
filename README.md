@@ -1,7 +1,5 @@
 # Coneccion a la api de AVIATIONSTACK
 
-## Primeros Pasos  
-
 ### Requisitos Previos  
 
 - Node.js 18.0.0 o superior  
@@ -11,8 +9,7 @@
 
 1. Clona el repositorio:  
    ```bash
-   git clone https://github.com/your-username/skyconnect-explorer.git
-   cd skyconnect-explorer
+   git clone https://github.com/codigo-natural/api-aviationstack.git
    ```  
 
 2. Instala las dependencias:  
